@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mt</groupId>
+	<artifactId>maven-stanalone-application</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+
+	<name>maven-stanalone-application</name>
+	<url>http://mithuntechnologies.com</url>
+
+	<organization>
+		<name>MT</name>
+		<url>http://mt.com/</url>
+	</organization>
+	
+	<description>Maven Standalone Application</description>
+
+	<properties>
+		<sonar.host.url>http://18.222.191.194:9000/</sonar.host.url>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<distributionManagement>
+	    <repository>
+	      <id>nexus</id>
+	      <name>nexus</name>
+	      <url>http://nexus.jx.192.168.56.104.nip.io:32675/repository/maven-releases/</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>nexus</name>
+	      <url>http://nexus.jx.192.168.56.104.nip.io:32675/repository/maven-snapshots/</url>
+	    </snapshotRepository>
+	</distributionManagement>
+
+	<!-- Committing and updating changes through Maven, by using below mvn command. 
+		For Commiting mvn -Dmessage="Updated using maven" scm:checkin For updating 
+		mvn scm:update -->
+	<scm>
+		<connection>scm:git:https://github.com/MTDevOps/maven-standalone-application</connection>
+		<developerConnection>scm:git:https://github.com/MTDevOps/maven-standalone-application</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/MTDevOps/maven-standalone-application</url>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/MTDevOps/maven-standalone-application/issues</url>
+	</issueManagement>
+
+</project>
